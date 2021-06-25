@@ -1,0 +1,20 @@
+<h1>Registrar de Funcionário</h1>
+<a href="/Login"><button name="btnVoltar"> Voltar </button></a>
+{{#each erros}}
+    <div class="alert alert-danger"> {{texto}} </div>
+{{else}}
+{{/each}}
+<form name="firebase" method="POST">
+    <p>Usuário: <input type="text" name="usuarioF"> </p>
+    <p>Nome: <input type="text" name="nomeF"> </p>
+    <p>Sobrenome: <input type="text" name="sobreF"> </p>
+    <p>Matricula: <input type="text" name="matriculaF"> </p>
+    <p>email: <input type="text" name="emailF"></p>
+    <p>Senha: <input type="password" name="senhaF"> </p>
+    <p>Repitar Senha: <input type="password" name="repetirF"> </p>
+    <p><input type="hidden" value="matriz" name="lojaF">
+    <p>
+        <input type="submit" formaction="/Login/RegistarConf" value="Registrar" name="btnRegistrar">
+        
+    </p>
+</form>

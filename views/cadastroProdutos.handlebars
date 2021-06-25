@@ -1,0 +1,23 @@
+<h1>Cadastro de Produtos</h1>
+<a href="/Produtos">
+        <button name="btnVoltar"> Voltar </button>
+        </a>
+<form name="firebase" method="POST">
+    <p>Autor: <input type="text" name="autor"> </p>
+    <p>Categoria: <input type="text" name="categoria"> </p>
+    <p>D-Lançamento: <input type="date" name="dLancamento"> </p>
+    <p>Descrição: <input type="text" name="descricao"> </p>
+    <p>Disponibilidade: <input type="radio" name="disponibilidade" value="disponivel"> Disponivel
+                        <input type="radio" name="disponibilidade" value="falta"> Falta</p>
+    <p>ISBN: <input type="text" name="isbn"> </p>
+    <p>Nome: <input type="text" name="nome"> </p>
+    <P>Valor: <input type="number" name="valor"> </P>
+    <P>Desconto: <input type="number" name="desconto"></P>
+    <P>Quantidade: <input type="number" name="quantidade"></P>
+    <p>
+        <input type="submit" formaction="/CadastroProduto/Conf" value="Registrar" name="btnRegistrar">
+        <input type="submit" formaction="/CadastroProduto/Consultar" value="consultar" name="btnConsultar">
+    </p>
+</form>
+
+

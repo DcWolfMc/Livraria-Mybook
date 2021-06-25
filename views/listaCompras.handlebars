@@ -1,0 +1,46 @@
+{{#each erros}}
+    <div class="alert alert-danger"> {{texto}} </div>
+{{else}}
+{{/each}}
+<h1>Lista de Compras</h1>
+<a href="/"><button name="btnVoltar">Voltar</button></a>
+<form name="firebase" method="GET">
+    <p>
+    Nome: <input type="text" name="produto" placeholder="Nome">
+    Quantidade: <input type="number" name="quantidade" placeholder="Quant">
+    <input type="submit" name="btnAdd" value="Adicionar" formaction="/Vendas/Add">
+    <input type="button" name="btnApagar" value="Apagar">
+    </p>
+    <p>
+    Cliente: <input type="text" name="nomeCliente" placeholder="Nome do CLiente" value={{nomeCliente}}>
+    CPF: <input type="number" name="cpfCliente" placeholder="CPF" value={{cpfCliente}}>
+    *Data da compra: <input type="date" name="data" value={{data}}>
+    <input type="submit" name="btnFinalizar" value="Finalizar" formaction="/Vendas/Finalizar"></p>
+</form>
+<table>
+    <tr>
+        <th>Nome</th>
+        <th>Quantidade</th>
+        <th>Valor</th>
+        {{#each listaItens}}
+            <tr>
+                {{#each item}}
+                <td>{{dado}}</td>
+                {{/each}}
+            </tr>
+        {{else}}
+        {{/each}}
+    </tr>
+</table>
+<p>Subtotal: R$ {{valorTotal}} </p>
+*
+Temporario
+<script>
+    /*
+    <tr>
+        <td>"Nome"</td>
+        <td>"Quantidade"</td>
+        <td>"Valor"</td>
+    </tr>
+    */
+</script>
